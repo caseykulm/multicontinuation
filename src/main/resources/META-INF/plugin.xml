@@ -26,14 +26,15 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
+    <fileTypeFactory implementation="com.caseykulm.intellij.multicontinuation.simple.SimpleFileTypeFactory"/>
   </extensions>
 
   <actions>
-    <action id="multiContinuationIndent"
-        class="com.caseykulm.intellij.multicontinuation.MultiContinuationAction"
+    <action id="MultiContinuationIndent"
+        class="com.caseykulm.intellij.multicontinuation.MultiContinuationIndentAction"
         text="Multi Continuation Indent"
-        description="Applies the desired continuation indent settings">
-      <add-to-group group-id="MainMenu" anchor="last"/>
+        description="Support for different tab levels for different types of multi continuation indents">
+      <add-to-group group-id="TabsPlacementGroup" anchor="last"/>
     </action>
   </actions>
 
