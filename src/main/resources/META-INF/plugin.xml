@@ -1,0 +1,40 @@
+<idea-plugin>
+  <id>com.caseykulm.intellij.multicontinuation</id>
+  <name>Multi Continuation Indents</name>
+  <version>0.1.0</version>
+  <vendor email="n/a" url="http://caseykulm.com">Casey Kulm</vendor>
+
+  <description><![CDATA[
+      Support for different tab levels for different types of continuation indents.
+    ]]></description>
+
+  <change-notes><![CDATA[
+      <h1>1.0.0</h1>
+      <ul>
+        <li>TBD</li>
+      </ul>
+    ]]>
+  </change-notes>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="162"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.intellij">
+  </extensions>
+
+  <actions>
+    <action id="multiContinuationIndent"
+        class="com.caseykulm.intellij.multicontinuation.MultiContinuationAction"
+        text="Multi Continuation Indent"
+        description="Applies the desired continuation indent settings">
+      <add-to-group group-id="MainMenu" anchor="last"/>
+    </action>
+  </actions>
+
+</idea-plugin>
