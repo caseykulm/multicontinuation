@@ -26,16 +26,21 @@
   -->
 
   <extensions defaultExtensionNs="com.intellij">
-    <fileTypeFactory implementation="com.caseykulm.intellij.multicontinuation.simple.SimpleFileTypeFactory"/>
+    <completion.contributor
+            language="JAVA"
+            implementationClass="com.caseykulm.intellij.multicontinuation.MultiContinuationIndentContributor"/>
   </extensions>
 
   <actions>
-    <action id="MultiContinuationIndent"
-        class="com.caseykulm.intellij.multicontinuation.MultiContinuationIndentAction"
-        text="Multi Continuation Indent"
-        description="Support for different tab levels for different types of multi continuation indents">
-      <add-to-group group-id="TabsPlacementGroup" anchor="last"/>
-    </action>
   </actions>
+
+  <application-components>
+  </application-components>
+
+  <project-components>
+  </project-components>
+
+  <module-components>
+  </module-components>
 
 </idea-plugin>
